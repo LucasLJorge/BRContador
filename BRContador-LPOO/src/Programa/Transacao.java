@@ -5,37 +5,45 @@ package Programa;
  * Estas despesas estarï¿½o sempre disponï¿½veis ao usuï¿½rio, de modo que ele saiba o que estï¿½ acontcendo.s
  * 
  */
-import java.util.Date;
 
-public abstract class Transacao extends Programa implements Interface{
-	private static String nomeDaTransacao;
-	private static Double valorDaTransacao;
-	//boolean tipoDaTransacao;
-	//Date diaDaTransacao;
+public abstract class Transacao extends Programa{
+	public static String [] nomeDaTransacao;
+	public static Double [] valorDaTransacao;
+	static int posicaoVNome = 0;
+	static int posicaoVValor = 0;
 	
 	Double saldoDisponivel;
 	Double totalDeDespesas;
 	
-	public Transacao(String nomeTransacao, Double valorTransacao) {
-		nomeDaTransacao = nomeTransacao;
-		valorDaTransacao = valorTransacao;
-		// TODO Auto-generated constructor stub
+	public Transacao(int qtdPos) {
+		if (qtdPos <= 0){
+			qtdPos = 10;
+        }
+		
+		nomeDaTransacao = new String[qtdPos];
+		valorDaTransacao = new Double[qtdPos];
 	}
 	
-	public String getNomeDaTransacao() {
-		return nomeDaTransacao;
+	public String getNomeDaTransacao(int posicaoTransacao) {
+		return nomeDaTransacao [posicaoTransacao];
 	}
 
 	public static void setNomeDaTransacao(String nomeTransacao) {
-		nomeDaTransacao = nomeTransacao;
+		nomeDaTransacao [posicaoVNome] = nomeTransacao;
+		System.out.println("Nome da transacao é: " + nomeDaTransacao [posicaoVNome] + "." + " Pos: " + posicaoVNome);
+		posicaoVNome++;
+		System.out.println("Posicao agora é: " + posicaoVNome + ".");
 	}
 	
-	public Double getValorDaTransacao() {
-		return valorDaTransacao;
+	public Double getValorDaTransacao(int posicaoTransacao) {
+		return valorDaTransacao [posicaoTransacao];
 	}
 	
 	public static void setValorDaTransacao(Double valorTransacao) {
-		valorDaTransacao = valorTransacao;
+		valorDaTransacao [posicaoVValor] = valorTransacao;
+		System.out.println("Valor da transacao é: " + valorDaTransacao [posicaoVValor] + "." + " Pos: " + posicaoVValor);
+		posicaoVValor++;
+		System.out.println("Posicao agora é: " + posicaoVValor + ".");
 	}
 	
 	@Override
@@ -43,13 +51,12 @@ public abstract class Transacao extends Programa implements Interface{
 		return "toString Abstrato.";
 	}
 	
-	@Override
 	public void setSaldoDisponivel(Double disponivel) {
 		saldoDisponivel += disponivel;
 	}
 	
-	@Override
 	public void setTotalDeDespesas(Double total) {
 		totalDeDespesas += total;
 	}
+	
 }

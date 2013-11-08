@@ -6,25 +6,18 @@ public class TransacaoEntrada extends Transacao{
 	
 	static Scanner leitor = new Scanner(System.in);
 	static Double saldoDisponivel;
-	//Double saldoDisponivel;
 	
-	public TransacaoEntrada(String nomeDaTransacao,	Double valorDaTransacao) {
-		super(nomeDaTransacao, valorDaTransacao);
-		// TODO Auto-generated constructor stub
+	public TransacaoEntrada(int qtdPos) {
+		super(qtdPos);
 	}
-
+	
 	public static void realizaEntrada(){
 		System.out.println("Insira um nome para a transação:");
 		setNomeDaTransacao(leitor.nextLine());
 		System.out.println("Insira o valor da movimentação:");
-		saldoDisponivel = leitor.nextDouble();
-		setValorDaTransacao(saldoDisponivel);
+		//saldoDisponivel = leitor.nextDouble();
+		setValorDaTransacao(leitor.nextDouble());
 	}
 	
-	@Override
-	public String toString(){
-		return "toString Entradas";
-	}
-
 
 }

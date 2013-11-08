@@ -1,6 +1,6 @@
 package Programa;
 
-import java.util.Date;
+//import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Scanner;
@@ -22,14 +22,7 @@ public class Programa {
 		
 		String nomeUsuario;
 		int opcao;
-		SimpleDateFormat data = new SimpleDateFormat("dd/MM/yyyy");
-		
-		//Extrato saldo;
-		//saldo = new Extrato(00.00, 00.00, 00.00);
-				
-		//Transacao transacao;
-		//transacao = new Transacao("","", 00.00);
-		
+		//SimpleDateFormat data = new SimpleDateFormat("dd/MM/yyyy");
 		
 		//Personaliza a interface com um nome fornecido pelo usuï¿½rio
 		System.out.println("Digite um nome de usuï¿½rio:");
@@ -39,7 +32,7 @@ public class Programa {
 			System.out.println("Olï¿½ " + nomeUsuario + "! O que vocï¿½ deseja?\n");
 			do{
 	
-			System.out.println("1- Visualizar saldo;");
+			System.out.println("1- Visualizar contas;");
 			System.out.println("2- Adicionar receita;");
 			System.out.println("3- Adicionar despesa;");
 			System.out.println("4- Sair;\n");
@@ -50,14 +43,20 @@ public class Programa {
 			
 			//A opcão 1 mostra quanto o usuário tem disponível (saldo)
 			case 1:
-				//System.out.println(Receita.getTotalDeDespesas());
+				
 				continue;
 			//Adiciona valores do orçamento
 			case 2:
+				TransacaoEntrada trEnt;
+				System.out.println("Quantas entradas?");
+				trEnt = new TransacaoEntrada(scanner.nextInt());
 				TransacaoEntrada.realizaEntrada();
 				continue;
 			//Retira valores do orçamento
 			case 3:
+				TransacaoSaida trSai;
+				System.out.println("Quantas saídas?");
+				trSai = new TransacaoSaida(scanner.nextInt());
 				TransacaoSaida.realizaSaida();
 				continue;
 			//Caso o usuï¿½rio digite uma opï¿½ï¿½o errada, este aviso serï¿½ mostrado 
