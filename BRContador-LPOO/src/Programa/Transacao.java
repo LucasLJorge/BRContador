@@ -30,9 +30,9 @@ public abstract class Transacao extends Programa{
 
 	public static void setNomeDaTransacao(String nomeTransacao) {
 		nomeDaTransacao [posicaoVNome] = nomeTransacao;
-		System.out.println("Nome da transacao é: " + nomeDaTransacao [posicaoVNome] + "." + " Pos: " + posicaoVNome);
+		System.out.println("Nome da transacao e: " + nomeDaTransacao [posicaoVNome] + "." + " Pos: " + posicaoVNome);
 		posicaoVNome++;
-		System.out.println("Posicao agora é: " + posicaoVNome + ".");
+		System.out.println("Posicao agora e: " + posicaoVNome + ".");
 	}
 	
 	public Double getValorDaTransacao(int posicaoTransacao) {
@@ -41,9 +41,9 @@ public abstract class Transacao extends Programa{
 	
 	public static void setValorDaTransacao(Double valorTransacao) {
 		valorDaTransacao [posicaoVValor] = valorTransacao;
-		System.out.println("Valor da transacao é: " + valorDaTransacao [posicaoVValor] + "." + " Pos: " + posicaoVValor);
+		System.out.println("Valor da transacao e: " + valorDaTransacao [posicaoVValor] + "." + " Pos: " + posicaoVValor);
 		posicaoVValor++;
-		System.out.println("Posicao agora é: " + posicaoVValor + ".");
+		System.out.println("Posicao agora e: " + posicaoVValor + ".");
 	}
 	
 	@Override

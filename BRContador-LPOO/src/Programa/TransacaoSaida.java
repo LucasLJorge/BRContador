@@ -12,9 +12,9 @@ public class TransacaoSaida extends Transacao implements Interface{
 	}
 
 	public static void realizaSaida(){
-		System.out.println("Insira um nome para a transação:");
+		System.out.println("Insira um nome para a transacao:");
 		setNomeDaTransacao(leitor.nextLine());
-		System.out.println("Insira o valor da movimentação:");
+		System.out.println("Insira o valor da movimentacao:");
 		valorDespesa = leitor.nextDouble();
 		valorDespesa =- valorDespesa;
 		setValorDaTransacao(valorDespesa);

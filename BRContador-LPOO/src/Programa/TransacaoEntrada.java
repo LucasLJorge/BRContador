@@ -12,9 +12,9 @@ public class TransacaoEntrada extends Transacao{
 	}
 	
 	public static void realizaEntrada(){
-		System.out.println("Insira um nome para a transação:");
+		System.out.println("Insira um nome para a transacao:");
 		setNomeDaTransacao(leitor.nextLine());
-		System.out.println("Insira o valor da movimentação:");
+		System.out.println("Insira o valor da movimentacao:");
 		//saldoDisponivel = leitor.nextDouble();
 		setValorDaTransacao(leitor.nextDouble());
 	}
