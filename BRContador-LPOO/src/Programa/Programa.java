@@ -25,11 +25,11 @@ public class Programa {
 		//SimpleDateFormat data = new SimpleDateFormat("dd/MM/yyyy");
 		
 		//Personaliza a interface com um nome fornecido pelo usuï¿½rio
-		System.out.println("Digite um nome de usuï¿½rio:");
+		System.out.println("Digite um nome de usuario:");
 		nomeUsuario = scanner.nextLine();
 		
 		//O menu em si
-			System.out.println("Olï¿½ " + nomeUsuario + "! O que vocï¿½ deseja?\n");
+			System.out.println("Ola " + nomeUsuario + "! O que voce deseja?\n");
 			do{
 	
 			System.out.println("1- Visualizar contas;");
@@ -41,21 +41,21 @@ public class Programa {
 	
 			switch(opcao){
 			
-			//A opcão 1 mostra quanto o usuário tem disponível (saldo)
+			//A opcï¿½o 1 mostra quanto o usuï¿½rio tem disponï¿½vel (saldo)
 			case 1:
 				
 				continue;
-			//Adiciona valores do orçamento
+			//Adiciona valores do orï¿½amento
 			case 2:
 				TransacaoEntrada trEnt;
 				System.out.println("Quantas entradas?");
 				trEnt = new TransacaoEntrada(scanner.nextInt());
 				TransacaoEntrada.realizaEntrada();
 				continue;
-			//Retira valores do orçamento
+			//Retira valores do orï¿½amento
 			case 3:
 				TransacaoSaida trSai;
-				System.out.println("Quantas saídas?");
+				System.out.println("Quantas saidas?");
 				trSai = new TransacaoSaida(scanner.nextInt());
 				TransacaoSaida.realizaSaida();
 				continue;
@@ -63,7 +63,7 @@ public class Programa {
 			case 4:
 				System.exit(0);
 			default:
-				System.err.println("Opção inválida! Tente novamente.");
+				System.err.println("Opcao invalida! Tente novamente.");
 				continue;
 			}
 			
@@ -73,7 +73,7 @@ public class Programa {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("\t --BRContador--");
+		System.out.println("\t _-_BRContador_-_\n");
 
 		Programa programa;
 		programa = new Programa();
