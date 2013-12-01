@@ -22,6 +22,7 @@ public class Programa {
 		
 		String nomeUsuario;
 		int opcao;
+		int cont = 0;
 		//SimpleDateFormat data = new SimpleDateFormat("dd/MM/yyyy");
 		
 		//Personaliza a interface com um nome fornecido pelo usu�rio
@@ -43,7 +44,9 @@ public class Programa {
 			
 			//A opc�o 1 mostra quanto o usu�rio tem dispon�vel (saldo)
 			case 1:
-				
+				for(;cont>0;cont--)
+				{System.out.println("conta-"+cont+", Nome: "+Transacao.nomeDaTransacao[0]+", Valor: "+Transacao.valorDaTransacao[0]);}
+				cont++;
 				continue;
 			//Adiciona valores do or�amento
 			case 2:
@@ -51,6 +54,7 @@ public class Programa {
 				System.out.println("Quantas entradas?");
 				trEnt = new TransacaoEntrada(scanner.nextInt());
 				TransacaoEntrada.realizaEntrada();
+				cont++;
 				continue;
 			//Retira valores do or�amento
 			case 3:
@@ -58,6 +62,7 @@ public class Programa {
 				System.out.println("Quantas saidas?");
 				trSai = new TransacaoSaida(scanner.nextInt());
 				TransacaoSaida.realizaSaida();
+				cont++;
 				continue;
 			//Caso o usu�rio digite uma op��o errada, este aviso ser� mostrado 
 			case 4:
